@@ -1,0 +1,17 @@
+<p>
+  <strong>メッセージ:</strong>
+  <%= @tweet.message %>
+</p>
+
+<p>
+  <strong>投稿時間:</strong>
+  <%= @tweet.tdate %>
+</p>
+
+<p>
+  <strong>経過時間:</strong>
+    <% elapsed = Time.current - @tweet.tdate %>
+    <%= elapsed.to_i/60 %>分前
+</p>
+
+<%= link_to 'Back', '/' %>
