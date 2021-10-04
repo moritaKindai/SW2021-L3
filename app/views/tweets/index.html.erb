@@ -1,10 +1,3 @@
-<h1>Twieer Light</h1>
-
-<% if flash[:notice] %>
-  <strong><%= flash[:notice] %></strong>
-<% end %>
-<hr>
-
 <% @tweets.each do |t| %>
   <p>
     <%= t.message %><br>
@@ -14,7 +7,4 @@
     <%= link_to '表示', "/tweets/#{t.id}" %>
     <%= link_to '編集', "/tweets/#{t.id}/edit" %>
   </p>
-  <hr>
 <% end %>
-
-<p><%= link_to '新規追加', '/tweets/new' %></p>
